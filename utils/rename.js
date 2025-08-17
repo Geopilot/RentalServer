@@ -10,10 +10,9 @@ function replaceExtensions(dir) {
             replaceExtensions(fullPath); // Recurse into directories
         } else if (fullPath.endsWith('.js')) {
             let content = fs.readFileSync(fullPath, 'utf8');
-            // Modify only import paths containing a '/'
-            let modified = content.replace(/from\s*['"]((?![^'"]*@[a-zA-Z0-9_-]+\/).*)\/([^'"]*)['"]/g, "from '$1/$2.js'");
+            // Modify only import paths containing a '/' and don't already end with .js
+            let modified = content.replace(/from\s*['"]((?![^'"]*@[a-zA-Z0-9_-]+\/).*)\/([^'"]*?)(?<!\.js)['"]/g, "from '$1/$2.js'");
 
-            // let modified = content.replace(/from '([^']*)\/([^']*)'/g, "from '$1/$2.js'");
             fs.writeFileSync(fullPath, modified, 'utf8');
         }
     });

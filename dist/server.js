@@ -4,14 +4,14 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import compression from 'compression';
 import cors from 'cors';
-import listingRoute from './routes/listings/listing.js.js';
-import searchRoute from './routes/search/general.js.js';
+import listingRoute from './routes/listings/listing.js';
+import searchRoute from './routes/search/general.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(compression());
-const PORT = 5000;
+const PORT = process.env.PORT || 8080;
 // const pool = new Pool({
 //     host: `${process.env.PG_HOST}`,
 //     port: `${process.env.PG_PORT}`,
@@ -40,7 +40,6 @@ const corsOptions = {
         "https://localhost:8000",
         "https://localhost:3000",
         "https://localhost:5000",
-        "https://geopilot.io",
         "https://www.geopilot.io",
         'https://sendgrid.api-docs.io',
     ],
