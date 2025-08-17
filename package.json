@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon --exec tsx ./server.js",
-    "build": "SET NODE_ENV=production && npx tsc && node utils/rename.js",
+    "build": "SET NODE_ENV=production && npx tsc",
+    "rename": "node utils/rename.js",
     "start": "node dist/server.js",
     "stop": "pm2 stop",
     "restart": "pm2 restart"
