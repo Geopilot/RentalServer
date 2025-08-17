@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "nodemon --exec tsx ./server.js",
-    "build": "cross-env NODE_ENV=production npx tsc",
+    "build": "cross-env NODE_ENV=production npx tsc && npm run rename",
     "rename": "node utils/rename.js",
     "start": "node dist/server.js",
     "stop": "pm2 stop",
