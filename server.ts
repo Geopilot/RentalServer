@@ -54,6 +54,8 @@ const corsOptions: cors.CorsOptions = {
         "https://localhost:5000",
         "https://www.geopilot.io",
         'https://sendgrid.api-docs.io',
+        'https://expressrent.ca',
+        'https://rent-anything-seven.vercel.app'
     ],
     credentials: true,
     optionsSuccessStatus: 200,
