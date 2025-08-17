@@ -52,7 +52,6 @@ const corsOptions: cors.CorsOptions = {
         "https://localhost:8000",
         "https://localhost:3000",
         "https://localhost:5000",
-        "https://geopilot.io",
         "https://www.geopilot.io",
         'https://sendgrid.api-docs.io',
     ],
