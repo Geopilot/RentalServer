@@ -1,0 +1,15 @@
+import express from 'express';
+import catchAsync from '../../utils/catchAsync';
+import { postListing, uploadListingMedia } from '../../controllers/listing';
+import multer from 'multer';
+import { storage } from '../../middlewares/preUpload';
+
+const router = express.Router();
+
+const upload = multer();
+const media = multer({ storage });
+
+router.post("/post", upload.none(), catchAsync(postListing));
+router.post("/uploadMedia", media.array('images'), catchAsync(uploadListingMedia));
+
+export default router;
