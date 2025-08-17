@@ -5,7 +5,7 @@
   },
   "scripts": {
     "dev": "nodemon --exec tsx ./server.js",
-    "build": "SET NODE_ENV=production && npx tsc",
+    "build": "cross-env NODE_ENV=production npx tsc",
     "rename": "node utils/rename.js",
     "start": "node dist/server.js",
     "stop": "pm2 stop",
@@ -28,6 +28,7 @@
     "@types/compression": "^1.8.1",
     "@types/cors": "^2.8.19",
     "@types/multer": "^2.0.0",
+    "cross-env": "^10.0.0",
     "nodemon": "^3.1.10",
     "tsx": "^4.20.3"
   }
