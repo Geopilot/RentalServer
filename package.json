@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "nodemon --exec tsx ./server.ts",
     "build": "npx tsc",
-    "start": "pm2 start dist/server.js",
+    "start": "node dist/server.js",
     "stop": "pm2 stop",
     "restart": "pm2 restart"
   },
