@@ -19,7 +19,7 @@ dotenv.config();
 const app = express();
 app.use(compression());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 // const pool = new Pool({
 //     host: `${process.env.PG_HOST}`,

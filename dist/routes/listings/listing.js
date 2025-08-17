@@ -1,8 +1,8 @@
 import express from 'express';
-import catchAsync from '../../utils/catchAsync.js';
-import { postListing, uploadListingMedia } from '../../controllers/listing.js';
+import catchAsync from '../../utils/catchAsync.js.js';
+import { postListing, uploadListingMedia } from '../../controllers/listing.js.js';
 import multer from 'multer';
-import { storage } from '../../middlewares/preUpload.js';
+import { storage } from '../../middlewares/preUpload.js.js';
 const router = express.Router();
 const upload = multer();
 const media = multer({ storage });
