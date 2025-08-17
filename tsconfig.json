@@ -101,6 +101,7 @@
     },
     "include": [
         "**/*.ts",
-        "utils/descriptionWriter.tsx"
+        "utils/descriptionWriter.tsx",
+        "utils/rename.js"
     ]
 }

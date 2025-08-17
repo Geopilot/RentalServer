@@ -8,10 +8,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { validationResult, query } from 'express-validator';
-import { supabase } from '../clients/supabase';
-import cloudinaryV2 from '../clients/cloudinary';
+import { supabase } from '../clients/supabase.js';
+import cloudinaryV2 from '../clients/cloudinary.js';
 import path from 'path';
-import { uploadToCloudinary } from '../middlewares/preUpload';
+import { uploadToCloudinary } from '../middlewares/preUpload.js';
 export const postListing = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const { title, description, dailyPrice, location, category } = req.body;
     const numericPrice = Number(dailyPrice);
